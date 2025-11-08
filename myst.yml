@@ -6,15 +6,13 @@ project:
     url: https://mybinder.org
     repo: UCB-stat-159-f25/hw3-beccaashley
     ref: main
-  
-site:
-  template: book-theme
-  options:
-    logo: null
-
-project:
   toc:
     - file: README.md
       title: Home
     - file: LOSC_Event_tutorial.ipynb
       title: LIGO Event Tutorial
+  
+site:
+  template: book-theme
+  options:
+    logo: null
