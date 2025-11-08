@@ -1,0 +1,11 @@
+version: 1
+project:
+  id: 08d6b418-ca66-4bd1-bf87-7001eb3d0f2f
+  title: "LIGO Homework 3 – MyST Site"
+  description: "Reproducible LIGO event analysis using MyST Markdown and Jupyter Notebooks."
+  keywords: ["LIGO", "Gravitational Waves", "Reproducibility", "MyST", "STAT159/259"]
+  authors: ["LIGO Scientific Collaboration (LSC)", "Rebecca Bachtra"]
+  github: https://github.com/UCB-stat-159-f25/hw3-beccaashley
+  toc: []
+site:
+  template: book-theme
