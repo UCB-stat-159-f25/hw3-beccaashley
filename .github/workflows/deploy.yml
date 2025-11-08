@@ -2,8 +2,8 @@ name: Deploy MyST site to GitHub Pages
 
 on:
   push:
-    branches: ["main"]
-  workflow_dispatch:
+    branches:
+      - main
 
 permissions:
   contents: read
@@ -17,36 +17,25 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    branches:
-      - main
-
-permissions:
-  contents: write
-  pages: write
-  id-token: write
-
-jobs:
-  build-deploy:
-    runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
+        
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
-
+          
       - name: Install MyST
         run: npm install -g mystmd
-
+          
       - name: Build MyST site
-        run: myst build
-
+        run: myst build --html
+        
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v2
         with:
-          path: _build/html
+          path: '_build/html'
 
   deploy:
     environment:
@@ -57,19 +46,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
-
-=======
-        run: |
-          npm install -g mystmd
-
-      - name: Build MyST site
-        run: |
-          myst build
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: _build/html
->>>>>>> origin/main
+        uses: actions/deploy-pages@v3
