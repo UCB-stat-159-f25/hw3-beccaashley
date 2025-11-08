@@ -1,2 +1,19 @@
-# MyST build outputs
-_build
+# Build output
+_build/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment
+.env
+
+# OS
+.DS_Store
+Thumbs.db

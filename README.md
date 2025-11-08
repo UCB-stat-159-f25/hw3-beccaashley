@@ -1,6 +1,6 @@
 # LIGO Homework 3 – MyST Site
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ucb-stat-159-f25/hw3-beccaashley/HEAD)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ucb-stat-159-f25/hw3-beccaashley/main)
 
 This project reproduces parts of the LIGO Gravitational Wave Event tutorial, including:
 - Implementation of `whiten`, `write_wavfile`, `reqshift`, and `plot_spectrogram` utilities.
