@@ -22,11 +22,9 @@ def event_meta():
     with open(json_path, "r") as f:
         events = json.load(f)
 
-    # Prefer GW150914 if present, else take the first event available.
     if "GW150914" in events:
         ev = events["GW150914"]
     else:
-        # pick any event
         ev = next(iter(events.values()))
 
     meta = {

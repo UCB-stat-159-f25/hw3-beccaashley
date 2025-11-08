@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel", "numpy"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ligotools"
+version = "0.1.0"
+description = "LIGO tools for HW3"
+authors = [
+    { name = "Ligo Scientific Collaboration (LSC) and Rebecca Bachtra" }
+]
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "numpy",
+    "scipy",
+    "matplotlib",
+    "h5py",
+    "gwpy",
+]
+
+[tool.setuptools]
+packages = ["ligotools"]
